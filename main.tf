@@ -25,8 +25,12 @@ resource "aws_s3_bucket" "tf_state_bucket_s3_192" {
     enabled = true
   }
 }
-resource "aws_s3_bucket" "test" {
+resource "aws_s3_bucket" "test_bucket1" {
   bucket = "rutvik-atlantis-demo-bucket-192"
+}
+
+resource "aws_s3_bucket" "test_bucket2" {
+  bucket = "rutvik-atlantis-demo-bucket-193"
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
